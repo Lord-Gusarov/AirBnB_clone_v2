@@ -5,7 +5,7 @@ apt-get update
 apt-get -y install nginx
 mkdir -p /data/web_static/releases/test/ /data/web_static/shared/
 echo "<html><h1>Fake file, Nginx is Working!</h1></html>" | tee /data/web_static/releases/test/index.html
-ln -s /data/web_static/releases/test/ /data/web_static/current
+ln -sf /data/web_static/releases/test/ /data/web_static/current
 chown -R ubuntu:ubuntu /data/
 
 FILE="/etc/nginx/sites-available/default"
