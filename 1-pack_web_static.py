@@ -1,4 +1,4 @@
-#!/usr/bin/pyhton3
+#!/usr/bin/python3
 """ Creates .tgz archive from the contents of the web_static dir """
 from fabric.api import local, settings
 import datetime
