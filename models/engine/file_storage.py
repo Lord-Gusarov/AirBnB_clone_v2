@@ -41,6 +41,10 @@ class FileStorage:
         if key in FileStorage.__objects:
             del FileStorage.__objects[key]
 
+    def close(self):
+        """Method for closing Flask connection"""
+        self.reload()
+
     def reload(self):
         """Loads storage dictionary from file"""
         from models.base_model import BaseModel
