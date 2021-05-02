@@ -86,4 +86,5 @@ class DBStorage:
 
     def close(self):
         """Closes Flask connection"""
-        self.__session.remove()
+        if self.__session is not None:
+            self.__session.remove()
