@@ -17,6 +17,7 @@ def teardwon(exception=None):
 def states_list():
     """Returns list of States in html template"""
     states = storage.all(State).values()
+    states = sorted(states, key=lambda s: s.name)
     return render_template('7-states_list.html', states=states)
 
 
